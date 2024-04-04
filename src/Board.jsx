@@ -29,10 +29,10 @@ import { Tab } from "bootstrap";
  **/
 
 function Board({ nrows = 3, ncols = 3, chanceLightStartsOn = 0.5 }) {
-  const [board, setBoard] = useState(createBoard(nrows, ncols, chanceLightStartsOn));
-//TODO: Refactor.
+  const [board, setBoard] = useState(createBoard());
+
   /** create a board nrows high/ncols wide, each cell randomly lit or unlit */
-  function createBoard(nrows, ncols, chanceLightStartsOn) {
+  function createBoard() {
     let initialBoard = [];
     for (let i = 0; i < nrows; i++) {
       const row = [];
